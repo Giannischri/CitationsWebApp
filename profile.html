@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Create &mdash; Onepage Website Template by Colorlib</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <div class="border-bottom top-bar py-2 bg-dark" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            
+          <span><strong id="usernamelbl" style="color:rgb(0, 252, 239)" type="hidden">Username:</strong> <label style="color:red" id="usernameglbl"></label></span>
+          <span><strong id="rolelbl" style="color:rgb(0, 252, 239)" type="hidden">Role:</strong> <label style="color:red" id="roleglbl"></label></span>
+          <span><button id="logout" class="btn btn-outline-danger" style="display:none;" onclick="logout()">Logout</button></span>
+            
+          </div>
+          <div class="col-md-6">
+            <div class="form-popup" id="loginform" style="display:none">
+              <form action="login.php" method="POST" class="form-container">
+                <h1 style="color:red">Login</h1>
+                <label for="email"><b style="color:red">Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b style="color:red">Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" name="logsub" class="btn btn-outline-primary">Login</button>
+                <button type="button" class="btn btn-outline-danger" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+            <div class="form-popup" id="signupform" style="display:none">
+              
+            </div>
+            <ul class="social-media">
+              <li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+
+
+
+          <img src="images/logo.png" />
+          <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Icsd-Postmaker<span
+                class="text-primary">.</span> </a></h1>
+
+
+
+
+          <div class="col-12">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="index.html" class="nav-link" style="color:rgb(0, 252, 239)">Home</a></li>
+               
+                
+                <li><a href="postan.html" style="color:rgb(0, 252, 239)">Post annaouncement</a></li>
+                <li id="profilebtn"><a href="profile.html" style="color:rgb(0, 252, 239)" class="nav-link">Profile</a></li>
+                <li>
+                  <a href="stats.html" style="color:rgb(0, 252, 239)" class="nav-link">Statistics</a>
+                </li>
+                <li id="adminbtn"><a href="admin.html" style="color:red" class="nav-link">Admin</a></li>
+                <li id="loginbtn"><a href="javascript:openForm();" style="color:red" class="nav-link">Login</a></li>
+                <li id="signupbtn"><a href="signup.html" style="color:red" class="nav-link">Sign up</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
+              class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+  </div>
+
+  </header>
+
+  <div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade"
+    data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center">
+
+
+      </div>
+    </div>
+  </div>
+ 
+  <section class="site-section">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col">
+          <div class="well">
+
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" href="#profile" data-toggle="tab">User Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pass" data-toggle="tab">Password</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#posts" data-toggle="tab">Posts </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane active in" id="profile">
+                <form method="POST" id="profinfo"  action="authorprof.php">
+                    <div class="form-group row">
+                      
+                        <div class="col-5">
+
+                          <label for="username">Username:</label><br>
+                            <input type="text" class="form-control input-lg" id="usrname" name="usrname" required>
+                            <label id="namelbl"for="name">Name:</label><br>
+                            <input type="text" class="form-control input-lg" id="name" name="name" required>
+                            <label id="surnamelbl"for="surname">Surname:</label><br>
+                            <input type="text" class="form-control input-lg" id="surname" name="surname" required>
+                            <label id="orcidurllbl" for="orcid">Orcid URL:</label><br>
+                            <input type="text" class="form-control input-lg" id="orcidurl" name="orcidurl">
+                            <label id="urllbl" for="url">URL:</label><br>
+                            <input type="text" class="form-control input-lg" id="url" name="url">
+                            <label id="specialtylbl" for="role">Specialty:</label><br>
+                            <input type="text" class="form-control input-lg" id="specialty" name="specialty">
+                            
+                        </div>
+                        <div class="col-7">
+                        </div>
+                    </div>
+                    <input type="submit" name="profsub" value="Update" class="btn btn-danger">
+                </form>
+               
+                  
+               
+                        
+
+                 
+                
+              </div>
+              <div class="tab-pane fade" id="pass">
+                <form id="tab2" method="POST" action="authorprof.php">
+                  <div class="form-group row">       
+                    <div class="col-5">
+                  <label>Old Password</label>
+                  <input type="password" name="opassword" class="form-control input-lg">
+                  <label>New Password</label>
+                  <input type="password" name="npassword" class="form-control input-lg">
+                    </div>
+                  </div>
+                  <div>
+                    <input type="submit" name="cpassword" value="ChangePassword" class="btn btn-danger">
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="posts">
+              
+                </div>
+                
+                 
+  
+              </div>
+            </div>
+           
+
+          </div>
+
+             
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-5">
+              <h2 class="footer-heading mb-4">About Us</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum
+                autem. Amet aliquid nesciunt veritatis aliquam.</p>
+            </div>
+            <div class="col-md-3 ml-auto">
+              <h2 class="footer-heading mb-4">Features</h2>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h2 class="footer-heading mb-4">Follow Us</h2>
+              <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+          <form action="#" method="post">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control border-secondary text-white bg-transparent"
+                placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row pt-5 mt-5 text-center">
+        <div class="col-md-12">
+          <div class="border-top pt-5">
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+              with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/FileSaver.js"></script>
+  <script language="JavaScript" type="text/javascript">
+   
+     function userinfo()
+     {
+       console.log("xaaxxaaxxa");
+       document.getElementById("name").style.display="none";
+       document.getElementById("namelbl").style.display="none";
+       document.getElementById("surname").style.display="none";
+       document.getElementById("surnamelbl").style.display="none";
+       document.getElementById("urllbl").style.display="none";
+       document.getElementById("url").style.display="none";
+       document.getElementById("orcidurl").style.display="none";
+       document.getElementById("orcidurllbl").style.display="none";
+       document.getElementById("specialty").style.display="none";
+       document.getElementById("specialtylbl").style.display="none";
+     }
+    function openForm() {
+      document.getElementById("loginform").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("loginform").style.display = "none";
+    }
+   
+    
+    function printposts(data) {
+      var objects=new Array();
+     var articles="";
+     var books="";
+     var inprocs="";
+     var inbooks="";
+     
+  
+              for (var i = 0; i < data.length; i++) {
+                objects.push(data[i]);
+                
+                 if(Object.values(data[i]).length==12)
+              {
+                  articles +=
+                  '<form id="'+data[i].id+'" name="'+data[i].id+'"  method="post" enctype="multipart/form-data">'+
+                    '<div class="row">'+
+                    '<div class="col-6">'+
+                    '<input type="checkbox" id="c'+data[i].id+'" name="abox">'+ 
+                '<label style="color:rgb(0, 252, 239);font-size:20px">Title:</label>'+
+                '<input type="text" name="atitle" class="form-control" value="'+data[i].title+'"  required><br>'+
+   
+                '<textarea type="text" class="form-control" name="note" cols="50" rows="5" >'+data[i].note+'</textarea>'+
+                
+                '<label>Post URL:</label>'+
+                '<input type="text" name="url" class="form-control" value="'+data[i].url+'">'+
+                '<label>Date:'+data[i].date+'</label><br>'+
+                '</div>'+
+                    '<div class="col-6">'+
+                '<div class="form-row">'+
+                  '<div class="col">'+
+                    '<label >1st Author:</label><br>'+
+                    '<input type="text"  name="author1" class="form-control" value="'+data[i].authors[0]+'"required>'+
+                    '<label >2nd Author:</label><br>'+
+                    '<input type="text"  name="author2" class="form-control" value="'+data[i].authors[1]+'">'+
+                    '<label >3rd Author:</label><br>'+
+                    '<input type="text"  name="author3" class="form-control" value="'+data[i].authors[2]+'">'+
+                    '<label >4th Author:</label><br>'+
+                    '<input type="text"  name="author4" class="form-control" value="'+data[i].authors[3]+'">'+
+                    
+                  '</div><div class="col">'+
+                    '<label >Article Name:</label><br>'+
+                    '<input type="text"  name="articlename" class="form-control" value="'+data[i].articlename+'"required>'+   
+                    '<label>Volume:</label><br>'+
+                    '<input type="text" class="form-control" value="'+data[i].volume+'" name="volume">'+
+                    '<label >Pages:</label><br>'+
+                      '<input type="text" class="form-control" value="'+data[i].pages+'" name="pages">'+
+                      '<label >Number:</label><br>'+
+                      '<input type="text" class="form-control" value="'+data[i].number+'" name="number">'+
+                  '</div>'+
+                    '<div class="col">'+
+                      
+                    
+                     
+                    '<label >DOI:</label><br>'+
+                    '<input type="text"  class="form-control" value="'+data[i].document+'" name="doi"><br>'+
+                    '<input type="submit" class="btn btn-danger" name="update"  value="Update">'+
+                    '<input type="submit" class="btn btn-danger" name="delete" value="Delete">'+
+                    '</div>'+
+                  '</div>'+
+                  '</div>'+
+                  '</div>'+
+                  '</form><br>';        
+              
+            }
+               else if(Object.values(data[i]).length==17)
+                
+                {
+                  inprocs+=
+                  '<form name="'+data[i].id+'" id="'+data[i].id+'"  method="post" enctype="multipart/form-data">'+
+                    '<div class="row"><div class="col-6">'+
+                    '<input type="checkbox" id="c'+data[i].id+'" name="inprocbox">'+ 
+                    '<label style="color:rgb(0, 252, 239);font-size:20px">Title:</label>'+
+                    '<input type="text" name="inproctitle" class="form-control" value="'+data[i].title+'" required><br>'+
+      
+                    '<textarea type="text" name="note" class="form-control" cols="50" rows="8">'+data[i].note+'</textarea>'+
+                       
+                    '<label>Post URL:</label>'+
+                    '<input type="text" name="url" class="form-control" value="'+data[i].url+'">'+
+                    
+                    '<label>Date:</label>'+data[i].date+'<br>'+  
+                    '</div>'+
+                    '<div class="col-6">'+ 
+                    '<div class="form-row">'+
+                      '<div class="col-4">'+
+                        '<label >1st Author:</label><br>'+
+                    '<input type="text"  name="author1" class="form-control" value="'+data[i].authors[0]+'"required>'+
+                    '<label >2nd Author:</label><br>'+
+                    '<input type="text"  name="author2" class="form-control" value="'+data[i].authors[1]+'">'+
+                    '<label >3rd Author:</label><br>'+
+                    '<input type="text"  name="author3" class="form-control" value="'+data[i].authors[2]+'">'+
+                    '<label >4th Author:</label><br>'+
+                    '<input type="text"  name="author4" class="form-control" value="'+data[i].authors[3]+'">'+
+                    '<label for="adoi">Organisation:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].organisation+'" name="organisation">'+
+                        
+                      '</div>'+
+                        '<div class="col-4">'+
+                          '<label >Publisher:</label><br>'+
+                        '<input type="text" class="form-control"  name="publisher" value="'+data[i].publisher+'" required>'+
+                          
+                        '<label for="avolume">Adress:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].adress+'" name="adress">'+
+                        '<label for="adoi">Volume:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].volume+'" name="volume">'+
+                        '<label for="adoi">Number:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].number+'" name="number">'+
+                        '<label for="adoi">Editor:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].editor+'"name="editor"><br>'+
+                      '</div>'+
+                        '<div class="col-4">'+
+                          '<label>Booktitle:</label>'+
+                    '<input type="text" class="form-control" name="booktitle" value="'+data[i].booktitle+'">'+
+                          '<label for="apages">Pages:</label><br>'+
+                          '<input type="text" class="form-control" value="'+data[i].pages+'" name="pages">'+
+                          '<label for="adoi">Series:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].series+'" name="series">'+
+                        '<label for="adoi">DOI:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].document+'" name="doi"><br>'+
+                        '<input type="submit" class="btn btn-danger" id="update" value="Update">'+
+                        '<input type="submit" class="btn btn-danger" id="delete" value="Delete">'+
+                        '</div>'+
+                        
+                      '</div>'+
+                      '</div>'+
+                    '</div>'+
+                      '</form><br>';
+                }
+                else if(Object.values(data[i]).length==15)
+                {
+                      books+=
+                      '<form id="'+data[i].id+'" name="'+data[i].id+'"  method="post" enctype="multipart/form-data">'+
+                        '<div class="row"><div class="col-6">'+
+                        '<input type="checkbox" id="c'+data[i].id+'" name="bookbox">'+ 
+                    '<label style="color:rgb(0, 252, 239);font-size:20px">Title:</label>'+
+                    '<input type="text" class="form-control" name="booktitle" value="'+data[i].title+'" required><br>'+
+      
+                    '<textarea type="text" class="form-control" name="note"  cols="50" rows="5">'+data[i].note+'</textarea>'+
+                   
+                    '<label>Post URL:</label>'+
+                    '<input type="text" class="form-control" value="'+data[i].url+'" name="url">'+
+                    '<label>Date:'+data[i].date+'</label><br>'+
+                    '</div><div class="col-6">'+
+                    
+                    
+                    '<div class="form-row">'+
+                      '<div class="col-4">'+
+                        '<label >1st Author:</label><br>'+
+                    '<input type="text"  name="author1" class="form-control" value="'+data[i].authors[0]+'"required>'+
+                    '<label >2nd Author:</label><br>'+
+                    '<input type="text"  name="author2" class="form-control" value="'+data[i].authors[1]+'">'+
+                    '<label >3rd Author:</label><br>'+
+                    '<input type="text"  name="author3" class="form-control" value="'+data[i].authors[2]+'">'+
+                    '<label >4th Author:</label><br>'+
+                    '<input type="text"  name="author4" class="form-control" value="'+data[i].authors[3]+'">'+
+                      '</div>'+
+                      '<div class="col-4">'+
+                        '<label >Publisher:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].publisher+'" name="publisher" required>'+
+                        '<label >Adress:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].adress+'" name="adress">'+
+                        '<label>Volume:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].volume+'" name="volume">'+
+                        '<label>ISBN:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].isbn+'" name="isbn"><br>'+
+                      '</div>'+
+                      '<div class="col-4">'+
+                        '<label>Series:</label><br>'+
+                          '<input type="text" class="form-control" value="'+data[i].series+'" name="series">'+
+                          '<label>Number:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].number+'" name="number">'+
+                        '<label>Edition:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].edition+'" name="edition">'+
+                        '<label>ISSN:</label><br>'+
+                        '<input type="text" class="form-control" value="'+data[i].issn+'"  name="issn"><br>'+
+                        '<input type="submit" class="btn btn-danger" name="update" value="Update">'+
+                        '<input type="submit" class="btn btn-danger" name="delete" value="Delete">'+
+                        '</div>'+
+                      '</div>'+
+                      '</div></div>'+
+                      '</form>';
+                }
+                else if(Object.values(data[i]).length==18)
+                {
+                          inbooks+=
+                          '<form id="'+data[i].id+'" name="'+data[i].id+'"  method="post" enctype="multipart/form-data">'+
+                            '<div class="row"><div class="col-6">'+
+                            '<input type="checkbox" id="c'+data[i].id+'" name="inbookbox">'+ 
+                            ' <label style="color:rgb(0, 252, 239);font-size:20px">Title:</label>'+
+                        '<input type="text" class="form-control" value="'+data[i].title+'" name="inbooktitle" required><br>'+
+          
+                        '<textarea type="text" class="form-control" name="note" cols="50" rows="8">'+data[i].note+'</textarea>'+
+                        
+                        '<label>Post URL:</label>'+
+                        '<input type="text" class="form-control" value="'+data[i].url+'" name="url">'+
+                        '<label>Date:'+data[i].date+'</label><br>'+
+                        '</div><div class="col-6">'+
+                        '<div class="form-row">'+
+                          '<div class="col-4">'+
+                            '<label >1st Author:</label><br>'+
+                            '<input type="text"  name="author1" class="form-control" value="'+data[i].authors[0]+'"required>'+
+                            '<label >2nd Author:</label><br>'+
+                            '<input type="text"  name="author2" class="form-control" value="'+data[i].authors[1]+'">'+
+                            '<label >3rd Author:</label><br>'+
+                            '<input type="text"  name="author3" class="form-control" value="'+data[i].authors[2]+'">'+
+                            '<label >4th Author:</label><br>'+
+                            '<input type="text"  name="author4" class="form-control" value="'+data[i].authors[3]+'">'+           
+                            '</div>'+
+                          ' <div class="col-4">'+
+                            ' <label>Publisher:</label><br>'+
+                            '<input type="text" class="form-control" value="'+data[i].publisher+'" name="publisher" required>'+
+                            
+                              ' <label>Adress:</label><br>'+
+                            '<input type="text" class="form-control" value="'+data[i].adress+'" name="adress">'+
+                            '<label>Chapter:</label><br>'+
+                              '<input type="text" class="form-control" value="'+data[i].chapter+'" name="chapter" required>'+
+                              '<label>Pages:</label><br>'+
+                              '<input type="text" class="form-control" value="'+data[i].pages+'"  name="pages">'+
+                            '</div>'+
+                          '<div class="col-4">'+
+                            
+                            
+                              ' <label>Number:</label><br>'+
+                              ' <input type="text" class="form-control" value="'+data[i].number+'" name="number">'+
+                              '<label>Series:</label><br>'+
+                              '<input type="text" class="form-control" value="'+data[i].series+'" name="series">'+
+                              '<label>Volume:</label><br>'+
+                            '<input type="text" class="form-control" value="'+data[i].volume+'" name="volume">'+
+                            '<label>Edition:</label><br>'+
+                            '<input type="text" class="form-control" value="'+data[i].edition+'" name="edition">'+
+                            '</div>'+
+                            ' </div>'+
+                            ' <div class="form-row">'+
+                            '<div class="col-4">'+
+                             
+                              '</div>'+
+                            '<div class="col-4">'+
+                             
+                            '</div>'+
+                          '<div class="col-4">'+
+                            
+                            '</div>'+
+                          ' </div> '+                    
+                        '<div class="form-row">'+
+                        '<div class="col-4">'+
+                          ' <label>Type:</label><br>'+
+                                '<input type="text" class="form-control" value="'+data[i].type+'" name="type">'+
+                                '</div>'+
+                            '<div class="col-4">'+
+                            '<label >ISBN:</label><br>'+
+                            '<input type="text" class="form-control" value="'+data[i].isbn+'" name="isbn">'+
+                            ' </div>'+
+                          ' <div class="col-4">'+
+                            '<label >ISSN:</label><br>'+
+                            '<input type="text" class="form-control" value="'+data[i].issn+'" name="issn"><br>'+
+                            '<input type="submit" class="btn btn-danger" name="update" value="Update">'+
+                            '<input type="submit" class="btn btn-danger" name="delete" value="Delete">'+
+                            '<br>'+
+                            '</div>'+
+                            ' </div>'+
+                          '<div class="form-row">'+
+                            '<br>'+     
+                        '</div>'+
+                      '</div></div>'+
+                        ' </form>';
+                }
+                
+                            
+
+          }
+
+          
+          var posts=document.getElementById('posts').innerHTML="<h6>Please check boxes to export</h6>"+
+          "<button onclick='exportposts(objects)' type='button' class='btn btn-danger'>Export</button>"+
+          "<br>"+
+          "<li style='color:red;font-size:30px'>Articles:</li><br>"+
+          articles+
+          "<li style='color:red;font-size:30px'>Inproceedings:</li><br>"+
+          inprocs+
+          "<li style='color:red;font-size:30px'>Books:</li><br>"+
+          books+
+          "<li style='color:red;font-size:30px'>InBooks:</li><br>"+
+          inbooks;
+          return objects;
+     
+
+          
+    }
+    function logout() {
+      $.ajax({
+        url: "functions.php",
+        type: 'post',
+        data: { "logout": "1" },
+        success: function () {
+          alert("You logged out");
+          location.reload();
+        }
+      });
+    }
+    function submitforms(objects)
+    {
+      console.log(objects);
+      for(var i=0;i<objects.length;i++)
+      {  
+        console.log(objects[i].id);
+      document.getElementById(objects[i].id).addEventListener('submit', function(evt){
+        evt.preventDefault();
+        
+          alert(document.activeElement.name);
+         var id=$(this).attr('id');
+         var array= $(this).serializeArray();  
+         console.log(id);
+         console.log(document.forms[5][18]);
+         console.log(array); 
+       $.ajax({
+                type:'POST',
+                url: "functions.php",
+                data: {"action":document.activeElement.name,"id":id,"array":array},
+                success: function (data) {               
+                  alert("Action completed");
+                  //location.reload();
+                }
+            });
+          
+       })
+      
+      }
+    }
+  
+    
+
+   
+
+  </script>
+
+  <script>
+    
+    $(document).ready(function(){
+      $.ajax({ url: "functions.php",
+              type:'post',
+              dataType: 'json',
+              data: { "calluser": "1"},
+              success: function(data){
+                if(data!==""){
+                  $('#usernameglbl').text(data.name);
+                $('#roleglbl').text(data.role);                
+                $('#logout').show();
+                   if(data.role!="author")
+                   {
+                     //console.log("xziixixix");
+                     userinfo();
+                     $('#usrname').val(data.name);
+                   }  
+                }
+              }});
+      });
+    $(document).ready(function () {
+      $.ajax({
+        url: "functions.php",
+        type: 'POST',
+        dataType: 'json',
+        data: { "profstuff": "1" },
+        success: function (data) {
+          $('#usrname').val(data.username);
+          $('#name').val(data.name);
+          $('#surname').val(data.surname);
+          $('#orcidurl').val(data.orcid);
+          $('#url').val(data.url);
+          $('#specialty').val(data.specialty);
+        }
+      });
+    });
+    var objects=new Array();
+    $(document).ready(function () {
+      $.ajax({
+        url: "functions.php",
+        type: 'POST',
+        dataType: 'json',
+        data: { "userposts": "1" },
+        success: function (data) {
+                  
+         objects=printposts(data);
+        
+         submitforms(objects);
+        
+         }
+        
+         
+         
+         
+        
+      
+    });
+  });
+  function exportposts(objects)
+  {
+    var exports=new Array();
+    alert("youhou");
+       for(var i=0;i<objects.length;i++)
+       {   
+         if(document.getElementById('c'+objects[i].id).checked)
+         exports.push(objects[i].id);
+       }
+       $.ajax({
+        url: "functions.php",
+        type: 'POST',
+        data: { "exportposts": "1","array":exports},
+        success: function (data) {
+          if(data!="")
+                  {
+                    var filename ="exportcitations.bib";
+                    var blob = new Blob([data], {
+                     type: "text/plain;charset=utf-8"
+                           });
+
+                   saveAs(blob, filename);
+                  }
+                  else
+                  alert("Sorry but operation cannot be done");
+                  location.reload();
+        
+         }
+
+    });
+  }
+  
+
+  </script>
+
+
+</body>
+
+</html>

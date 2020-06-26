@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create &mdash; Onepage Website Template by Colorlib</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="fonts/icomoon/style.css">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        
+        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+        
+        <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+        
+        <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+        
+        <link rel="stylesheet" href="css/aos.css">
+        
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+        
+        <div class="site-wrap">
+            
+            <div class="site-mobile-menu site-navbar-target">
+                <div class="site-mobile-menu-header">
+                    <div class="site-mobile-menu-close mt-3">
+                        <span class="icon-close2 js-menu-toggle"></span>
+                    </div>
+                </div>
+                <div class="site-mobile-menu-body"></div>
+            </div>
+            
+            <div class="border-bottom top-bar py-2 bg-dark" id="home-section">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p class="mb-0">
+                          <span class="mr-3">
+                            <span><strong id="usernamelbl" style="color:rgb(0, 252, 239)" style="display:none">Username:</strong> <label style="color:red"   id="usernameglbl"></label></span>
+              <span><strong id="rolelbl" style="color:rgb(0, 252, 239)" style="display:none;">Role:</strong> <label style="color:red" id="roleglbl"></label></span>
+              <span><button id="logout" class="btn btn-outline-danger" style="display:none;" onclick="logout()">Logout</button></span>
+                        </p>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-popup" id="loginform" style="display:none">
+                          <form action="login.php" method="POST" class="form-container" >
+                            <h1 style="color:red">Login</h1>
+                            <label for="email"><b style="color:red">Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+                        
+                            <label for="psw"><b style="color:red">Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+                          
+                           
+                          
+                        
+                            <button type="submit" name="logsub" class="btn btn-outline-primary">Login</button>
+                            <button type="button"  class="btn btn-outline-danger" onclick="closeForm()">Close</button>
+                          </form>
+                        </div>
+                        <ul class="social-media">
+                          <li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
+                          <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+                          <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+                          <li><a href="#" class="p-2"><span class="icon-linkedin"></span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+            </div>
+            <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <img src="images/logo.png" />
+                        <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Icsd-Postmaker<span class="text-primary">.</span> </a></h1>
+                        <div class="col-12">
+                            <nav class="site-navigation position-relative text-right" role="navigation">
+                                
+                                <ul id="toplis" class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                    <li><a href="index.html" class="nav-link" style="color:rgb(0, 252, 239)">Home</a></li>
+                                   
+                                    
+                                    <li><a href="postan.html" style="color:rgb(0, 252, 239)">Post annaouncement</a></li>
+                                    <li id="profilebtn"><a href="profile.html" style="color:rgb(0, 252, 239)" class="nav-link">Profile</a></li>
+                                    <li>
+                                      <a href="stats.html" style="color:rgb(0, 252, 239)" class="nav-link">Statistics</a>
+                                    </li>
+                                    <li id="adminbtn" style="display:inline"><a href="admin.html" style="color:red" class="nav-link">Admin</a></li>
+                                    <li id="loginbtn"><a href="javascript:openForm();" style="color:red" class="nav-link">Login</a></li>
+                                    <li id="signupbtn"><a href="signup.html" style="color:red" class="nav-link">Sign up</a></li>
+                                  </ul>
+                                       
+                            </nav>
+                        </div>
+                        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+                        <form action="#" method="post" class="form-inline p-5">
+                            <input type="text" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." style="width:60%;" >
+                            <button type="button" class="btn btn-primary btn" onclick="searchFunc()">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="site-section">
+                
+                <div class="col-sm-5" style="position:relative;margin-top:300px;margin-left:200px;" id="hide">
+                   
+                    <div class="list-group" id="show-list" style="width:50%;">
+                        
+                    </div>
+                </div>
+                <ul class="list-unstyled">
+                    <li style="margin-left:500px;">
+                        <div class="container">
+                            <table class='table table-striped table-bordered table-hover table-condensed large' id="Article_Table"  style="display:none; margin-left:-350px; " border="1" >
+                                <thead>
+                                    <tr>
+                                        <th>Number of Row</th>
+                                        <th>Article Name</th>
+                                        <th>Volume</th>
+                                        <th>Number</th>
+                                        <th>Pages</th>
+                                        <th>Document</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li style="margin-left:500px;">
+                        <div class="container">
+                            <table class='table table-striped table-bordered table-hover table-condensed large' id="Inbook_Table"  style="display:none; margin-left:-350px; " border="1" >
+                                <thead>
+                                    <tr>
+                                        <th>Number of Row</th>
+                                        <th>Publisher</th>
+                                        <th>Address</th>
+                                        <th>Chapter</th>
+                                        <th>Pages</th>
+                                        <th>Volume</th>
+                                        <th>Number</th>
+                                        <th>Series</th>
+                                        <th>Type</th>
+                                        <th>Edition</th>
+                                        <th>ISBN</th>
+                                        <th>ISSN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li style="margin-left:500px;">
+                        <div class="container">
+                            <table class='table table-striped table-bordered table-hover table-condensed large' id="Inproc_Table"  style="display:none; margin-left:-350px; " border="1" >
+                                <thead>
+                                    <tr>
+                                        <th>Number of Row</th>
+                                        <th>Booktitle</th>
+                                        <th>Editor</th>
+                                        <th>Series</th>
+                                        <th>Volume</th>
+                                        <th>Number</th>
+                                        <th>Pages</th>
+                                        <th>Organisation</th>
+                                        <th>Publisher</th>
+                                        <th>Address</th>
+                                        <th>Document</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li style="margin-left:500px;">
+                        <div class="container">
+                            <table class='table table-striped table-bordered table-hover table-condensed large' id="Book_Table" style="display:none; margin-left:-350px; " border="1" >
+                                <thead>
+                                    <tr>
+                                        <th>Number of Row</th>
+                                        <th>Publisher</th>
+                                        <th>Volume</th>
+                                        <th>Number</th>
+                                        <th>Series</th>
+                                        <th>Address</th>
+                                        <th>Edition</th>
+                                        <th>ISBN</th>
+                                        <th>ISSN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <h2 class="footer-heading mb-4">About Us</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+                                </div>
+                                <div class="col-md-3 ml-auto">
+                                    <h2 class="footer-heading mb-4">Features</h2>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Testimonials</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <h2 class="footer-heading mb-4">Follow Us</h2>
+                                    <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                                    <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                                    <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                                    <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--edw ksekinaei to subscribe newsletter -->
+                        
+                        
+                    </div>
+                    <div class="row pt-5 mt-5 text-center">
+                        <div class="col-md-12">
+                            <div class="border-top pt-5">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </footer>
+            
+        </div> <!-- .site-wrap -->
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script language="JavaScript" type="text/javascript">
+            function openForm() {
+                document.getElementById("loginform").style.display = "block";
+            }
+            
+            function closeForm() {
+                document.getElementById("loginform").style.display = "none";
+            }
+            console.log(document.getElementById('roleglbl'));
+
+    function logout() {
+      $.ajax({
+        url: "functions.php",
+        type: 'post',
+        data: { "logout": "1" },
+        success: function () {
+          alert("You logged out");
+          location.reload();
+        }
+      });
+    }
+            
+        </script>
+        <script>
+            $(document).ready(function () {
+                //$("#admin").hide(); 
+                $.ajax({
+                    url: "kfunctions.php",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: { "adminshit": "1" },
+                    success: function (data) {
+                        //alert("admin ajax");
+                        admin(data);
+                    }
+                });
+            });
+            
+            function admin(data){
+                if(data=="admin"){
+                    $("#admin").show();
+                }
+                else{
+                    $("#admin").hide();
+                }
+            }
+        </script>
+        <script src="js/typed.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+            $("#search").keyup(function(){
+            var searchText=$(this).val();
+            if(searchText!=''){
+            $.ajax({
+            url:'kfunctions.php',
+            method:'post',
+            data:{"query":searchText},
+            success:function(response){
+            //alert("stuff = "+response);
+            $("#show-list").html(response);
+            
+            }
+            });
+            }
+            else{
+            $("#show-list").html('');
+            }
+            });//bazei to value to repsonse to search bar otan pathsw to recomended value
+            $(document).on('click','a',function() {
+                $("#search").val($(this).text());
+                $("#show-list").html('');
+            });
+            
+        });
+    </script>  
+    <script>
+        function searchFunc(){
+            var search = $('#search').val();
+            $.ajax({
+                url: "kfunctions.php",
+                method: 'post',
+                dataType: 'json',
+                data: {"query2":search},
+                success: function (data) {
+                    alert(data);
+                    var len = data.length;
+                    for(var i=0; i<len; i++){
+                        if(typeof data[i]=='number'){
+                            //dn knei tpt
+                        }
+                        else if(typeof data[i]=='object'){
+                            if(i==1){
+                                alert("einai object typou inbook");
+                                $("#Inbook_Table").show();
+                                var tr_str = "<tr>" +
+                                "<td align='center'>" + (i+1) + "</td>" +
+                                "<td align='center' >" + data[i].inb_publisher + "</td>" +
+                                "<td align='center'>" + data[i].inb_adress + "</td>" +
+                                "<td align='center'>" + data[i].inb_chapter + "</td>" +
+                                "<td align='center'>" + data[i].inb_pages + "</td>" +
+                                "<td align='center'>" + data[i].inb_volume + "</td>"+"<td align='center'>" + data[i].inb_number + "</td>"+
+                                "<td align='center'>" + data[i].inb_series + "</td>" +
+                                "<td align='center'>" + data[i].inb_type + "</td>"+
+                                "<td align='center'>" + data[i].inb_edition + "</td>" +
+                                "<td align='center'>" + data[i].inb_isbn + "</td>"+
+                                "<td align='center'>" + data[i].inb_issn + "</td>"+
+                                "</tr>";
+                                $("#Inbook_Table tbody").append(tr_str);
+                            }
+                            else if(i==2){
+                                alert("einai object typou inproced");
+                                $("#Inproc_Table").show();
+                                var tr_str = "<tr>" +
+                                "<td align='center'>" + (i+1) + "</td>" +
+                                "<td align='center' >" + data[i].inp_booktitle + "</td>" +
+                                "<td align='center'>" + data[i].inp_editor + "</td>" +
+                                "<td align='center'>" + data[i].inp_series + "</td>" +
+                                "<td align='center'>" + data[i].inp_volume + "</td>" +
+                                "<td align='center'>" + data[i].inp_number + "</td>"+"<td align='center'>" + data[i].inp_pages + "</td>"+
+                                "<td align='center'>" + data[i].inp_organisation + "</td>" +
+                                "<td align='center'>" + data[i].inp_publisher + "</td>"+
+                                "<td align='center'>" + data[i].inp_adress + "</td>" +
+                                "<td align='center'>" + data[i].inp_document + "</td>"+
+                                "</tr>";
+                                $("#Inproc_Table tbody").append(tr_str);
+                            }
+                            else if(i==3){
+                                alert("einai object typou article");
+                                $("#Article_Table").show();
+                                var tr_str = "<tr>" +
+                                "<td align='center'>" + (i+1) + "</td>" +
+                                "<td align='center' >" + data[i].articlename + "</td>" +
+                                "<td align='center'>" + data[i].article_volume + "</td>" +
+                                "<td align='center'>" + data[i].article_number + "</td>" +
+                                "<td align='center'>" + data[i].article_pages + "</td>" +
+                                "<td align='center'>" + data[i].article_document + "</td>"+
+                                "</tr>";
+                                $("#Article_Table tbody").append(tr_str);
+                            }
+                            else if(i==4){
+                                alert("einai object typou book");
+                                $("#Book_Table").show();
+                                var tr_str = "<tr>" +
+                                "<td align='center'>" + (i+1) + "</td>" +
+                                "<td align='center' >" + data[i].book_publisher + "</td>" +
+                                "<td align='center'>" + data[i].book_volume + "</td>" +
+                                "<td align='center'>" + data[i].book_number + "</td>" +
+                                "<td align='center'>" + data[i].book_series + "</td>" +
+                                "<td align='center'>" + data[i].book_adress + "</td>"+"<td align='center'>" + data[i].book_edition + "</td>"+
+                                "<td align='center'>" + data[i].book_isbn + "</td>" +
+                                "<td align='center'>" + data[i].book_issn + "</td>"+
+                                "</tr>";
+                                $("#Book_Table tbody").append(tr_str);
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        $(document).ready(function(){
+      $.ajax({ url: "functions.php",
+              type:'post',
+              dataType: 'json',
+              data: { "calluser": "1"},
+              success: function(data){
+                if(data!==""){
+                    $('#usernameglbl').html(data.name);
+                $('#roleglbl').html(data.role);                
+                $('#logout').show();
+                //document.getElementById('adminbtn').style.display="none";
+                console.log(document.getElementById('roleglbl').innerText);
+                if(document.getElementById('roleglbl').innerText!="admin"){
+                    console.log("xaxaxaax");
+                    $("#adminbtn").hide();
+                document.getElementById('adminbtn').style.display="none";
+                }
+               
+                
+               
+                }
+              }});
+      });
+        </script>
+        
+        <script src="js/main.js"></script>
+        
+        
+        
+</body>
+</html>        
